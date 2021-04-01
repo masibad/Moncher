@@ -4,7 +4,7 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
-  --color-bodey-darker: #5c5577;
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
 }
@@ -131,11 +131,10 @@ a {
   }
 }
 
-/* List */
+/* Lists */
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -269,6 +268,7 @@ a {
   }
 }
 
+/* Inputs */
 .input {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
@@ -307,7 +307,7 @@ a {
 /* Cards */
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px #f1f1f1;
+  box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
 }
 
@@ -432,7 +432,7 @@ a {
 .quote {
   font-size: 3rem;
   font-style: italic;
-  color: var(--color-bodey-darker);
+  color: var(--color-body-darker);
   line-height: 1.3;
 }
 
@@ -565,7 +565,7 @@ a {
   }
 }
 
-/* Collapsible */
+/* Collapsibles */
 .collapsible__header {
   display: flex;
   justify-content: space-between;
@@ -789,5 +789,19 @@ a {
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__content {
     order: 2;
+  }
+}
+
+/* Showcase Block */
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .block-showcase__image {
+    justify-self: end;
+  }
+  .block-showcase__image > img {
+    width: auto;
+    max-width: 700px;
   }
 }
